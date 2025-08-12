@@ -14,6 +14,30 @@ You can see:
 
 - The Monkey Kind 3: https://cdn.anajakhd.com/file/anajakvideos/TheMonkeyKing3/master.m3u8
 
+- Cosmoball : https://cdn.anajakhd.com/file/anajakvideos/Cosmoball/master.m3u8
+
+- How to train your dragon: https://cdn.anajakhd.com/file/anajakvideos/HowToTrainYourDragon/master.m3u8
+
+- 28 Years later: https://cdn.anajakhd.com/file/anajakvideos/28YearsLater/master.m3u8
+
+- Sakra: https://cdn.anajakhd.com/file/anajakvideos/Sakra/master.m3u8
+
+- The Ghost Station: https://cdn.anajakhd.com/file/anajakvideos/TheGhostStation/master.m3u8
+
+- KarateKidLegends: https://cdn.anajakhd.com/file/anajakvideos/KarateKidLegends/master.m3u8
+
+- Waktu Maghrib: https://cdn.anajakhd.com/file/anajakvideos/WaktuMaghrib/master.m3u8
+
+- I am what I am : https://cdn.anajakhd.com/file/anajakvideos/IAmWhatIAm/master.m3u8
+
+- Kampung Keramat: https://cdn.anajakhd.com/file/anajakvideos/KampungKeramat/master.m3u8
+
+- The Sonic The Hedgehog: https://cdn.anajakhd.com/file/anajakvideos/SonicTheHedgehog3//master.m3u8
+
+- Ballerina: https://cdn.anajakhd.com/file/anajakvideos/Ballerina/master.m3u8
+
+- A Working Man: https://cdn.anajakhd.com/file/anajakvideos/AWorkingMan/master.m3u8
+
 
 ## Put my code on console log
 
