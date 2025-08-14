@@ -38,6 +38,20 @@ You can see:
 
 - A Working Man: https://cdn.anajakhd.com/file/anajakvideos/AWorkingMan/master.m3u8
 
+- Munafik: https://cdn.anajakhd.com/file/anajakvideos/Munafik/master.m3u8
+
+- Munafik-2: https://cdn.anajakhd.com/file/anajakvideos/Munafik2/master.m3u8
+
+- Zombie Hunter: https://cdn.anajakhd.com/file/anajakvideos/ZombieHunter/master.m3u8
+
+- Vina Before 7 Days: https://cdn.anajakhd.com/file/anajakvideos/VinaBefore7Days/master.m3u8
+
+- Haunted Road 2: https://cdn.anajakhd.com/file/anajakvideos/HauntedRoad2/master.m3u8
+
+- Red Cliff 2: https://cdn.anajakhd.com/file/anajakvideos/RedCliff2/master.m3u8
+
+- ShangHai-Noon: https://cdn.anajakhd.com/file/anajakvideos/ShanghaiNoon/master.m3u8
+
 
 ## Put my code on console log
 
