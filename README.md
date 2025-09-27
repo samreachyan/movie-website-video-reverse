@@ -76,6 +76,10 @@ You can see:
 
 - Ghost Net: https://cdn.anajakhd.com/file/anajakvideos/GhostNet/master.m3u8
 
+- The Weapons: https://cdn.anajakhd.com/file/anajakvideos/Weapons2025/master.m3u8
+
+- The Story of Yuan Tiangang: https://cdn.anajakhd.com/file/anajakvideos/TheStoryofYuanTiangang2024/master.m3u8
+
 
 ## Put my code on console log
 
