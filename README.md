@@ -52,6 +52,12 @@ You can see:
 
 - ShangHai-Noon: https://cdn.anajakhd.com/file/anajakvideos/ShanghaiNoon/master.m3u8
 
+- Nobody2: https://cdn.anajakhd.com/file/anajakvideos/Nobody2/master.m3u8
+
+- Weird Stories Of Baiyun Zhai: https://cdn.anajakhd.com/file/anajakvideos/WeirdStoriesofBaiyunZhai/master.m3u8
+
+- The Death Game: https://cdn.anajakhd.com/file/anajakvideos/TheDeathGame/master.m3u8
+
 
 ## Put my code on console log
 
