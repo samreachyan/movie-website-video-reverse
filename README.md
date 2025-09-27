@@ -84,9 +84,9 @@ After go to the website, you can just click on the console log and put the code 
 > You can change the `VIDEO_URL` only.
 
 ```javascript
-(function () {
+function video (VIDEO_URL) {
   // Global constant for video URL
-  const VIDEO_URL = "https://cdn.anajakhd.com/file/anajakvideos/Hitman2/master.m3u8";
+  // const VIDEO_URL = "https://cdn.anajakhd.com/file/anajakvideos/Hitman2/master.m3u8";
 
   // Step 1: Inject CSS
   const style = document.createElement("style");
@@ -158,5 +158,10 @@ After go to the website, you can just click on the console log and put the code 
   };
   hlsScript.onerror = () => console.error("Failed to load HLS.js");
   document.head.appendChild(hlsScript);
-})();
+}
+```
+
+>> Step 2: next usage.
+```javascript
+video("https://cdn.anajakhd.com/file/anajakvideos/CreationoftheGods1/master.m3u8")
 ```
