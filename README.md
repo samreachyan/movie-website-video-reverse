@@ -8,7 +8,9 @@ You can see:
 
 - Ne Zha II: https://cdn.anajakhd.com/file/anajakvideos/NeZha2/master.m3u8
 
-- CreationGodII: https://cdn.anajakhd.com/file/anajakvideos/CreationoftheGodsII/master.m3u8
+- Creation of The God I: https://cdn.anajakhd.com/file/anajakvideos/CreationoftheGods1/master.m3u8
+
+- Creation of The GodII: https://cdn.anajakhd.com/file/anajakvideos/CreationoftheGodsII/master.m3u8
 
 - Hit Man 2: https://cdn.anajakhd.com/file/anajakvideos/Hitman2/master.m3u8 
 
@@ -58,15 +60,36 @@ You can see:
 
 - The Death Game: https://cdn.anajakhd.com/file/anajakvideos/TheDeathGame/master.m3u8
 
+- The Chosen One: https://cdn.anajakhd.com/file/anajakvideos/TheChosenOne/master.m3u8
+
+- Jurnal Risa By Risa Saraswati: https://cdn.anajakhd.com/file/anajakvideos/JurnalRisabyRisaSaraswati/master.m3u8
+
+- Song Of The Assassins: https://cdn.anajakhd.com/file/anajakvideos/SongOfTheAssassins/master.m3u8
+
+- The Bad Guys: https://cdn.anajakhd.com/file/anajakvideos/TheBadGuys/master.m3u8
+
+- The Robot 2: https://cdn.anajakhd.com/file/anajakvideos/Enthiran2/master.m3u8
+
+- The Flash: https://cdn.anajakhd.com/file/anajakvideos/TheFlash/master.m3u8
+
+- Yadang The Snitch: https://cdn.anajakhd.com/file/anajakvideos/YadangTheSnitch/master.m3u8
+
+- Ghost Net: https://cdn.anajakhd.com/file/anajakvideos/GhostNet/master.m3u8
+
 
 ## Put my code on console log
 
 After go to the website, you can just click on the console log and put the code below into the console:
 
+> You can change the `VIDEO_URL` only.
+
 ```javascript
 (function () {
-  // Step 1: Inject CSS into <head>
-  const style = document.createElement('style');
+  // Global constant for video URL
+  const VIDEO_URL = "https://cdn.anajakhd.com/file/anajakvideos/Hitman2/master.m3u8";
+
+  // Step 1: Inject CSS
+  const style = document.createElement("style");
   style.textContent = `
     body {
       margin: 0;
@@ -90,51 +113,50 @@ After go to the website, you can just click on the console log and put the code 
   `;
   document.head.appendChild(style);
 
-  // Step 2: Create video container and video element
-  const videoContainer = document.createElement('div');
-  videoContainer.className = 'video-container';
+  // Step 2: Create video container & video element
+  const videoContainer = document.createElement("div");
+  videoContainer.className = "video-container";
   videoContainer.innerHTML = `
-    <video id="player" controls autoplay muted>
-      <source src="https://cdn.anajakhd.com/file/anajakvideos/Hitman2/master.m3u8" type="application/x-mpegURL">
+    <video id="player" controls autoplay preload="auto">
+      <source src="${VIDEO_URL}" type="application/x-mpegURL">
       Your browser does not support the video tag.
     </video>
   `;
-  document.body.innerHTML = ''; // Clear existing body content (optional, remove if you want to append)
+  document.body.innerHTML = ""; 
   document.body.appendChild(videoContainer);
 
-  // Step 3: Load HLS.js script dynamically
-  const hlsScript = document.createElement('script');
-  hlsScript.src = 'https://cdn.jsdelivr.net/npm/hls.js@latest';
+  // Step 3: Load HLS.js dynamically
+  const hlsScript = document.createElement("script");
+  hlsScript.src = "https://cdn.jsdelivr.net/npm/hls.js@latest";
   hlsScript.onload = () => {
-    // Step 4: Initialize video player after HLS.js loads
-    const video = document.getElementById('player');
-    const hlsUrl = 'https://cdn.anajakhd.com/file/anajakvideos/Hitman2/master.m3u8';
+    const video = document.getElementById("player");
 
     if (window.Hls && Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(hlsUrl);
+      const hls = new Hls({
+        maxBufferLength: 60,
+        maxMaxBufferLength: 120,
+        startFragPrefetch: true
+      });
+      hls.loadSource(VIDEO_URL);
       hls.attachMedia(video);
+
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        video.play().catch(error => console.error('Auto-play failed:', error));
+        video.play().catch(err => console.warn("Autoplay blocked by browser:", err));
       });
-      hls.on(Hls.Events.ERROR, (event, data) => {
-        console.error('HLS error:', data);
+
+      hls.on(Hls.Events.ERROR, (_, data) => {
+        console.error("HLS error:", data);
       });
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = hlsUrl;
-      video.addEventListener('loadedmetadata', () => {
-        video.play().catch(error => console.error('Auto-play failed:', error));
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = VIDEO_URL;
+      video.addEventListener("loadedmetadata", () => {
+        video.play().catch(err => console.warn("Autoplay blocked by browser:", err));
       });
     } else {
-      console.error('HLS is not supported in this browser.');
+      console.error("HLS not supported in this browser.");
     }
   };
-  hlsScript.onerror = () => console.error('Failed to load HLS.js');
+  hlsScript.onerror = () => console.error("Failed to load HLS.js");
   document.head.appendChild(hlsScript);
 })();
 ```
-
-If you can to change the movie, just change 2 variables:
-
-- videoContainer.innerHTML 
-- hlsUrl 
